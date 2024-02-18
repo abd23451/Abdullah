@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>عنوان الموقع</title>
+    <style>
+        :root{
+    --bg-color:#0E0C0D  ;
+    --second-color: linear-gradient(#685B4B ,#241A13  );
+    --text-color : #FFF5E6  ;
+    --main-color: linear-gradient(#EBD8AE ,#956233  );
+    --main-color2:   #FFD700;
+
+            }
+        
+
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color);
+       
+           
+    
+            
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid .8rem #EBD8AE;
+            margin: 100px; /* تم تحديث الهامش للحاوية */
+            transition: .3s;
+            
+        }
+        .container:hover {
+            border: rgb(255, 255, 255);
+            box-shadow: 0 0 1rem  #EBD8AE;
+            transform: scaleY(1.9rem);
+
+        }
+        .image {
+            width: auto;
+            height: auto;
+            max-width: 100%; /* يضمن أن الصورة لن تتجاوز عرض المتصفح */
+        }
+        .back-button {
+            display: flex;
+            width: 200px;
+            height: 50px;
+            margin: 50px auto;
+            background: var(--main-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 0;
+            text-decoration: none;
+            font-size: 17px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+        }
+        .back-button:hover {
+            background-color: #a04545;
+        }
+        h1 , p {
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            color:  var(--text-color);
+            
+        }
+        h1{
+            font-size: 2.3rem;
+            padding: .9rem 0 0 0;
+            margin: 0;
+            height: 80px;
+            background: var(--bg-color);
+            
+        }
+
+        .box-explaine{
+      
+            
+
+          margin-left: 8rem;
+          margin-right: 8rem;
+
+        }
+
+        p{
+            line-height: 1.4;
+            font-size: 1rem;
+
+            direction: rtl;
+
+        }
+
+        
+.mainBtn{
+    display: inline-block;
+    justify-content: center;
+   align-items: center;
+   padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none ;
+    color: var(--text-color);
+    font-weight: 600;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color2);
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    left: 3.4%;
+    transform: translate(0, -50%);
+    transition: .5s ease;
+}
+
+.mainBtn:hover {
+    box-shadow: none;
+    transform: scale(1.1);
+    
+}
+
+
+
+
+        /*    الأنماط الجديدة للنافذة المشروعة لظهور الصورة */
+        #myModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        #myModal img {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <h1> تصميم لورشة سيارات</h1>
+    <a href="GallaryProjectsGraphic.html" class="back-button">رجوع</a>
+
+    <div class="box-explaine">
+     <p> 
+        تم تصميم بطاقة الأعمال بطريقة فريدة تجمع بين 
+        الأناقة والواقعية، حيث تستخدم ألوان وأشكال تعكس الاحترافية والتميز. البطاقة
+         تحتوي على جميع المعلومات الأساسية التي يحتاجها العملاء المحتملين للتواصل مع العميل
+
+     </p>
+    </div>
+
+
+    <a href="index.html" class="mainBtn">الصفحة الرئيسية</a>
+
+    <div class="container">
+        <img id="myImg" class="image" src="images/btakah.png" alt="صورة">
+    </div>
+    <p> تواصل معنا لان </p>
+    <a onclick="location.href ='GallaryProjectsGraphic.html'" class="back-button">رجوع</a>
+    <!-- <a href="javascript:history.back()" class="back-button">رجوع</a>-->
+
+
+    <!-- النافذة المشروعة -->
+    <div id="myModal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+        modal.onclick = function() { 
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

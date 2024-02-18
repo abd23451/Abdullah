@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+*{
+    margin: 40px;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none ;
+    border: none;
+    outline: 0 ;
+    scroll-behavior: smooth;
+    font-family: "Almarai", sans-serif;
+}
+
+:root{
+    --bg-color:#0E0C0D  ;
+    --second-color: linear-gradient(#685B4B ,#241A13  );
+    --text-color : #FFF5E6  ;
+    --main-color: linear-gradient(#EBD8AE ,#956233  );
+    --main-color2:   #FFD700;
+
+
+}
+
+
+html{
+    font-size: 62.5%;
+    /* overflow: hidden; */
+    direction: rtl;
+
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+   
+}
+/* .services{
+    display: flex;
+    flex-direction: column; */
+
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.services-container .services-box {
+    /* flex: 1 1 30rem; */
+    
+    /* background: var(--second-color); */
+    padding: 0;
+    margin: 0;
+    height: 300px;
+    width: 300px;
+    border-radius: 2rem;
+    text-align: center;
+    /* 2border: .2rem solid var(--bg-color); */
+    transition: .5s ease;
+}
+
+/* .services-container ===.services-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    
+} */
+.services-container .services-box .imag {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+   
+}
+
+.services-container  .imag img{
+    border-radius: 2rem;
+    width: 89%;
+    height: 89%;
+    object-fit: cover; /* هنا تمت إضافة الخاصية */
+    object-position: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+    margin-bottom: -10px;
+
+    
+}
+
+.services-container  img:hover {
+    border-color: var(--main-color); 
+    transform: scale(1.02);
+}
+.full-box{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 4rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-items: start;
+
+}
+.full-box a{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.services-container  h2 {
+   width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: -10px; */
+    margin: 1px;
+    font-size: 2.3rem;
+    background: var(--second-color);
+    border-radius: 3rem;
+
+}
+
+.btn{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    padding: 10px 10px;
+    font-weight: 600;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color2);
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+    transform: scale(1.1);
+    
+}
+
+.mainBtn{
+    display: inline-block;
+    justify-content: center;
+   align-items: center;
+   padding: 10px 20px;
+    font-size: 1.5rem;
+    
+    color: var(--text-color);
+    font-weight: 600;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color2);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    transform: translate(0, -50%);
+    transition: .5s ease;
+}
+
+.mainBtn:hover {
+    box-shadow: none;
+    transform: scale(1.1);
+    
+}
+
+.top{
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    padding: .9rem 0 0 0;
+    margin: 0;
+    height: 80px;
+}
+
+/* .header{
+   margin: 0;
+    width: 100%;
+    padding: 0;
+    background: var(--second-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+ */
+
+ span{
+    color: var(--main-color2);
+    
+ }
+ .heading{
+    text-align: right;
+    font-size: 2.5rem;
+    direction: rtl;
+    
+ }
+
+/*BRAKOOINTS*/
+
+
+
+
+
+
+
+@media(max-width: 1200px){
+
+    .full-box{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .full-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+    </style>
+</head>
+<body>
+
+    <!-- <header class="header">
+        <a href="#" class="logo">الموقع الشخصي </a>
+
+    </header> -->
+
+    <h1 class="top">الاعمال</h1>
+
+    <h2 class="heading">آخر<span>المشاريع</span></h2>
+
+    <a href="index.html" class="mainBtn">الصفحة الرئيسية</a>
+
+    <section class="services" id="services">
+
+
+        <!-- صناديق المشاريع - اخر المشاريع -->
+
+
+
+        <!-- المشروع رقم 1 -->
+
+        <div class="full-box">
+          
+
+         <div class="services-container">
+            
+
+            <div class="services-box">
+                <h2>تصميمات لورشة اصلاح سيارات</h2>
+            
+                <div class="imag">
+
+                    <!-- صورة المشروع رقم 1 -->
+                    <img  src="images/proto1.jpg" alt="" onclick="location.href='1-Cars.html ' " >
+                    
+                </div>
+                
+                <a href="1-Cars.html" class="btn">شاهد</a>
+
+            </div>
+        </div>
+
+
+
+        <!-- المشروع رقم 2 -->
+        <div class="full-box">
+          
+
+            <div class="services-container">
+               
+   
+               <div class="services-box">
+                   <h2>شعار شركة سفريات ومنشورات </h2>
+               
+                   <div class="imag">
+                       <img src="images/proto1.jpg" alt=""   onclick="location.href='2-typing.html ' ">
+                   </div>
+                   
+                   <a href="2-typing.html" class="btn">شاهد</a>
+   
+               </div>
+           </div>
+        </div>
+
+
+        <div class="full-box">
+          
+
+            <div class="services-container">
+               
+   
+               <div class="services-box">
+                   <h2>بطاقة اعمال</h2>
+               
+                   <div class="imag">
+                       <img src="images/proto1.jpg" alt=""    onclick="location.href='3-CardBusnise.html ' ">
+                   </div>
+                   
+                   <a href="3-CardBusnise.html" class="btn">شاهد </a>
+   
+               </div>
+           </div>
+        </div>
+
+        
+
+        <div class="full-box">
+          
+
+            <div class="services-container">
+               
+   
+               <div class="services-box">
+                   <h2>تصميمات عشوائية</h2>
+               
+                   <div class="imag">
+                       <img src="images/proto1.jpg" alt=""  onclick="location.href = ' 4-Random.html ' ">
+                   </div>
+                   
+                   <a href="4-Random.html" class="btn">شاهد</a>
+                   
+   
+               </div>
+           </div>
+        </div>
+
+
+           
+            
+           
+
+        </div>
+    </section>
+
+</body>
+</html>
